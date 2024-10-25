@@ -1,10 +1,16 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import { WiTime9 } from "react-icons/wi";
-
 import { BsFire } from "react-icons/bs";
 
+import PropTypes from 'prop-types';
 
-const CardContainer = () => {
+
+
+
+        
+    const CardContainer = ({handleaddrecipe}) => {
+        console.log(handleaddrecipe)
     const [recipes, setRecipes] = useState([]);
 
     // Corrected useEffect with proper fetch syntax
@@ -17,7 +23,7 @@ const CardContainer = () => {
 
     return (
         <div className="md:w-2/3">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-5">
                 {recipes.map((recipe) => (
                     <div key={recipe.id} className="card bg-base-100 w-96  border-2">
                         <figure>
@@ -56,7 +62,7 @@ const CardContainer = () => {
 
                             </div>
                             <div className="card-actions ">
-                                <button className="btn bg-green-400 rounded-full w-40 h-5">Cook Now</button>
+                                <button onClick={()=>handleaddrecipe(recipe)} className="btn bg-green-400 rounded-full w-40 h-5">Cook Now</button>
                             </div>
                         </div>
                     </div>
@@ -65,5 +71,10 @@ const CardContainer = () => {
         </div>
     );
 };
+
+CardContainer.prototype={
+    handleaddrecipe:PropTypes.object,
+    
+}
 
 export default CardContainer;

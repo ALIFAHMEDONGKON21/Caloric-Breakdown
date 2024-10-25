@@ -8,8 +8,8 @@ const banner = () => {
   style={{
     backgroundImage: "url(https://i.ibb.co/DLfmyk8/pexels-quang-nguyen-vinh-222549-28999502.jpg)  ",
   }}>
-  <div className="hero-overlay bg-opacity-60 rounded-xl "></div>
-  <div className="hero-content text-neutral-content text-center">
+  <div className="hero-overlay bg-opacity-60 rounded-lg object-cover "></div>
+  <div className="hero-content text-neutral-content text-center ">
     <div className="max-w-md">
       <h1 className="mb-5 text-4xl font-bold">Discover an exceptional cooking class tailored for you!</h1>
       <p className="mb-5 text-gray-200">
