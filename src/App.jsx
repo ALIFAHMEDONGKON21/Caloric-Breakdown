@@ -4,6 +4,7 @@ import OurRecipes from "./components/OurRecipes";
 import Cardcontianer from './components/Cardcontianer'
 import Sidercontiner from "./components/Sidercontiner";
 import { useState } from "react";
+import Footer from "./components/footer/Footer";
 
 
 const App = () => {
@@ -39,6 +40,8 @@ const App = () => {
         < Cardcontianer handleaddrecipe={handleaddrecipe} ></Cardcontianer>
         <Sidercontiner addrecipe={addrecipe}></Sidercontiner>
       </section>
+
+      <Footer></Footer>
     </div>
   );
 };
